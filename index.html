@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@900&family=Poppins:wght@400;600&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="toDo.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header id="landing">Just Do It</header>
+    <div id="heart-beat-wrapper">
+      <div id="heart-beat">
+        <svg
+          version="1.0"
+          xmlns="https://www.w3.org/2000/svg"
+          xmlns:xlink="http://w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          width="500px"
+          height="100"
+          viewBox="0 0 500 100"
+          enable-background="new 0 0 500 100"
+          xml:space="preserve"
+        >
+          <polyline
+            fill="none"
+            stroke="#009B9E"
+            stroke-width="3"
+            stroke-miterlimit="10"
+            points="0,50 150,50 155,60 160,45 165,55 167,50 170,50 210,50 220,39 230,60 245,5 260,100 270,30 280,55 290,50 500,50"
+          />
+        </svg>
+        <div class="cover"></div>
+        <div class="reveal"></div>
+      </div>
+    </div>
+    <div id="task-input">
+      <div id="input-container">
+        <label for="todo">Describe your todo here!</label>
+        <div id="input-field">
+          <input
+            type="text"
+            placeholder="Dog feels energetic today..."
+            id="todo"
+          />
+          <button id="add">Add</button>
+        </div>
+      </div>
+      <div id="actions-container">
+        <button id="save">Save</button>
+        <button id="clear-done">Clear 'Done'</button>
+        <button id="clear-all">Clear 'Al!'</button>
+      </div>
+      <div id="todo-container"></div>
+    </div>
+    <div id="backdrop">
+      <section id="task-options">
+        <form class="options-form" id="options-form">
+          <div class="option-container">
+            <label for="option-note">Additional note:</label>
+            <input type="text" id="option-note" />
+          </div>
+
+          <div class="option-container">
+            <label for="option-priority">Select priority color:</label>
+            <div class="color-picker" id="option-priority">
+              <label>
+                <input
+                  pirority="1"
+                  name="priority"
+                  type="radio"
+                  value="rgba(9, 179, 9, 1)"
+                  id="green"
+                />
+                <span class="circle green"></span>
+              </label>
+              <label>
+                <input
+                  pirority="2"
+                  name="priority"
+                  type="radio"
+                  value="rgba(91, 206, 91, 1)"
+                  id="light-green"
+                />
+                <span class="circle light-green"></span>
+              </label>
+              <label>
+                <input
+                  pirority="3"
+                  name="priority"
+                  type="radio"
+                  value="rgba(255, 255, 0, 1)"
+                  id="yellow"
+                />
+                <span class="circle yellow"></span>
+              </label>
+              <label>
+                <input
+                  pirority="4"
+                  name="priority"
+                  type="radio"
+                  value="rgba(226, 113, 61, 1)"
+                  id="light-yellow"
+                />
+                <span class="circle light-yellow"></span>
+              </label>
+              <label>
+                <input
+                  pirority="5"
+                  name="priority"
+                  type="radio"
+                  value="rgba(206, 57, 38, 1)"
+                  id="brown"
+                />
+                <span class="circle brown"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="option-container">
+            <label for="option-deadline">Choose Deadline:</label>
+            <input type="date" id="option-deadline" />
+          </div>
+          <div class="option-actions">
+            <button type="submit" id="option-apply">Apply & Save</button>
+            <button type="submit" id="option-clear">Clear & Save</button>
+          </div>
+        </form>
+      </section>
+    </div>
+    <ul id="list-container"></ul>
+  </body>
+</html>
